@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Bliss</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4e1f2; /* Light plum background */
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            color: #6f2c91; /* Dark plum */
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #6f2c91; /* Dark plum */
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            border-radius: 10px;
+            width: 400px; /* Example image width */
+            height: 300px; /* Example image height */
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-content h2 {
+            color: #6f2c91; /* Dark plum */
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #c5b4d6; /* Light plum button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Best Sellers Section */
+        .best-sellers {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .best-sellers h3 {
+            color: #6f2c91; /* Dark plum */
+            margin-bottom: 20px;
+        }
+
+        .best-sellers .products {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .product {
+            max-width: 150px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+            height: 150px; /* Example image height */
+        }
+
+        /* Special Orders Section */
+        .special-orders {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .special-orders-content {
+            max-width: 50%;
+        }
+
+        .special-orders h3 {
+            color: #6f2c91; /* Dark plum */
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonials h3 {
+            color: #6f2c91; /* Dark plum */
+            margin-bottom: 20px;
+        }
+
+        .testimonial {
+            font-style: italic;
+            color: #666;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer .contact-info {
+            font-size: 14px;
+        }
+
+        .footer .social-icons a {
+            margin: 0 5px;
+            color: #6f2c91; /* Dark plum */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Sugar Bliss</h1>
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Products</a>
+            <a href="#">Special Orders</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="./cakelogo.png" alt="Cake Image">
+        <div class="hero-content">
+            <h2>Deliver You A Blissful Dessert in Every Bite</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. Dictum et at posuere dolor lacus sed urna nisl.</p>
+            <a href="#" class="btn">About Us</a>
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <h3>Check Out Our <span style="color: #6f2c91;">Best Sellers</span></h3>
+        <div class="products">
+            <div class="product">
+                <img src="./cake5.png" alt="Product 1">
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="product">
+                <img src="./cake7.png" alt="Product 2">
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="product">
+                <img src="cake3.png" alt="Product 3">
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="product">
+                <img src="cake4.png" alt="Product 4">
+                <p>Lorem ipsum</p>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </section>
+
+    <!-- Special Orders Section -->
+    <section class="special-orders">
+        <div class="special-orders-content">
+            <h3>Special Orders</h3>
+            <p style="
+            margin-bottom: 50px;
+        ">Lorem ipsum dolor sit amet consectetur. Gravida vitae tincidunt ante velit sed donec potent quam vulputate.</p>
+            <a href="#" class="btn">Place An Order</a>
+        </div>
+        <img src="./cake8.png" style="width: 400px; height: 300px;" alt="Special Order Cake">
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h3>Our Customers Feedback</h3>
+        <div class="testimonial">
+            <p>“ Lorem ipsum dolor sit amet consectetur. Tincidunt nec rhoncus morbi dictum ante.”</p>
+            <p><strong>Georgia Grimes</strong></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact-info">
+            <p>9998 Hayes Isle, Mantefurt 03581</p>
+            <p>505-418-0415</p>
+        </div>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

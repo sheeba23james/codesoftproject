@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let calvalue = "";
+    function clearr() {
+      console.log("knk", calvalue);
+      calvalue = "";
+      document.getElementById("inputField").value = calvalue;
+      console.log("knk", calvalue);
+    }
+    function del() {
+      calvalue = calvalue.slice(0,-1)
+      document.getElementById("inputField").value = calvalue;
+    }
+    function datainput(value) {
+      if (value == "%") {
+        let value1 = "%";
+        // value="/100*"
+        calvalue = calvalue + value1;
+        // calvalue=calvalue+value
+
+        document.getElementById("inputField").value = calvalue;
+        console.log("Data", calvalue);
+      } else {
+        calvalue = calvalue + value;
+        document.getElementById("inputField").value = calvalue;
+        console.log("Data", calvalue);
+      }
+    }
+
+    function calculateResult() {
+      if (calvalue.includes("%")) {
+        calvalue = calvalue.replace("%", "/100*");
+      }
+      try {
+        calvalue = eval(calvalue).toString(); // Evaluate expression
+        document.getElementById("inputField").value = calvalue;
+        console.log("RESULT", calvalue);
+      } catch (error) {
+        document.getElementById("inputField").value = "Error";
+        calvalue = "";
+      }
+    }
+  </script>
+  <body>
+    <div class="title">
+        <p class="titletxt">
+           Calculator
+        </p>
+    </div>
+    <div class="cal-container">
+      <div class="input-box">
+        <input class="datainput" id="inputField" disabled readonly />
+      </div>
+      <div class="icons" style="background-color: #ec9bff24">
+        <ul
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0px;
+            justify-content: center;
+          "
+        >
+          <li class="btn">
+            <button class="numbtn" id="ac" onclick="clearr()">ac</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" onclick="del()" id="del">del</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="per" onclick="datainput('%')">%</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="divide" onclick="datainput('/')">
+              /
+            </button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="seven" onclick="datainput('7')">
+              7
+            </button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="eight" onclick="datainput('8')">
+              8
+            </button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="nine" onclick="datainput('9')">9</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="multi" onclick="datainput('*')">
+              x
+            </button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="four" onclick="datainput('4')">4</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="five" onclick="datainput('5')">5</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="six" onclick="datainput('6')">6</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="sub" onclick="datainput('-')">-</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="one" onclick="datainput('1')">1</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="two" onclick="datainput('2')">2</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="three" onclick="datainput('3')">
+              3
+            </button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="plus" onclick="datainput('+')">+</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="zero" onclick="datainput('0')">0</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="dot" onclick="datainput('.')">.</button>
+          </li>
+          <li class="btn">
+            <button class="numbtn" id="equal" onclick="calculateResult()">
+              =
+            </button>
+          </li>
+          <!-- <li class="btn"><button class="numbtn" id="five">3</button></li> -->
+        </ul>
+      </div>
+
+      <!-- HTML !-->
+    </div>
+  </body>
+  <style>
+    .title{
+        display: flex;
+        justify-content: center
+    }
+    .cal-container {
+      margin: auto;
+      height: 600px;
+      width: 400px;
+      background-color: white;
+      border-radius: 50px;
+      /* border: 10px outset plum; */
+      box-shadow: -1px 1px 11px 4px violet;
+    }
+    .btn {
+      padding: 20px 20px;
+
+      list-style: none;
+    }
+    .numbtn {
+      border: none;
+      background-color: plum;
+      color: white;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+      font-weight: 600;
+      padding: 0px;
+    }
+    .input-box {
+      display: flex;
+      justify-content: center;
+    }
+    .datainput {
+      color: violet;
+      width: 70%;
+      font-weight: 600;
+      height: 50px;
+      font-size: 28px;
+      border-radius: 50px;
+      margin-top: 20px;
+      padding: 20px 20px;
+      background-color: white;
+      /* border: 2px solid plum;
+     */
+      border: 10px solid plum; /* Fallback in case border-image is not supported */
+
+      /* margin: auto; */
+    }
+    .titletxt{
+        font-size: 30px;
+        color: plum;
+        font-weight: 900;
+        text-shadow: 0 0 4px violet;
+    }
+  </style>
+</html>
